@@ -1,0 +1,42 @@
+<definitions id="definitions"
+   targetNamespace="http://www.omg.org/spec/BPMN/20100524/MODEL"
+   xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL"
+   xmlns:semantic="http://www.omg.org/spec/BPMN/20100524/MODEL"
+   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <process id="loanApplicationProcess" isExecutable="true">
+    <startEvent id="startEvent" name="Loan Application Submitted"/>
+    <parallelGateway id="parallelGateway1" name="Parallel Gateway 1"/>
+    <sequenceFlow id="sequenceFlow1" sourceRef="startEvent" targetRef="task1"/>
+    <task id="task1" name="Loan Application Approval"/>
+    <exclusiveGateway id="exclusiveGateway1" name="Decision Gateway 1"/>
+    <sequenceFlow id="sequenceFlow2" sourceRef="task1" targetRef="exclusiveGateway1"/>
+    <task id="task2" name="Prepare Acceptance Pack"/>
+    <sequenceFlow id="sequenceFlow3" sourceRef="exclusiveGateway1" targetRef="task2">
+      <conditionExpression xsi:type="tFormalExpression" language="http://www.w3.org/1999/XPath">approved</conditionExpression>
+    </sequenceFlow>
+    <exclusiveGateway id="exclusiveGateway2" name="Decision Gateway 2"/>
+    <sequenceFlow id="sequenceFlow4" sourceRef="task2" targetRef="exclusiveGateway2"/>
+    <task id="task3" name="Send Acceptance Pack to Customer"/>
+    <sequenceFlow id="sequenceFlow5" sourceRef="exclusiveGateway2" targetRef="task3">
+      <conditionExpression xsi:type="tFormalExpression" language="http://www.w3.org/1999/XPath">approved</conditionExpression>
+    </sequenceFlow>
+    <task id="task4" name="Verify Repayment Agreement"/>
+    <sequenceFlow id="sequenceFlow6" sourceRef="task3" targetRef="task4"/>
+    <exclusiveGateway id="exclusiveGateway3" name="Decision Gateway 3"/>
+    <sequenceFlow id="sequenceFlow7" sourceRef="task4" targetRef="exclusiveGateway3"/>
+    <task id="task5" name="Cancel Application"/>
+    <sequenceFlow id="sequenceFlow8" sourceRef="exclusiveGateway3" targetRef="task5">
+      <conditionExpression xsi:type="tFormalExpression" language="http://www.w3.org/1999/XPath">not approved</conditionExpression>
+    </sequenceFlow>
+    <task id="task6" name="Approve Application"/>
+    <sequenceFlow id="sequenceFlow9" sourceRef="exclusiveGateway3" targetRef="task6">
+      <conditionExpression xsi:type="tFormalExpression" language="http://www.w3.org/1999/XPath">approved</conditionExpression>
+    </sequenceFlow>
+    <task id="task7" name="Notify Applicant"/>
+    <sequenceFlow id="sequenceFlow10" sourceRef="task5" targetRef="task7"/>
+    <sequenceFlow id="sequenceFlow11" sourceRef="task6" targetRef="task7"/>
+    <endEvent id="endEvent" name="Process Complete"/>
+    <sequenceFlow id="sequenceFlow12" sourceRef="task7" targetRef="endEvent"/>
+    <sequenceFlow id="sequenceFlow13" sourceRef="task7" targetRef="endEvent"/>
+  </process>
+</definitions>
