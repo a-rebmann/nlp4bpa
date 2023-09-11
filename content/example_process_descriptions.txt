@@ -1,8 +1,29 @@
 Process title: Reimbursement of expenses:
-Process description: After an expense report is received from an employee, the employee is notified of the receipt of the report. Next, a new account must be created if the employee does not already have one. The report is then reviewed for automatic approval. Amounts under e 1,000 are automatically approved while amounts equal to or over e 1,000 require manual approval. In case of rejection, the employee must receive a rejection notice by email. In case of approval, the reimbursement is deposited directly to the employee’s bank account and an approval notice is sent to the employee via email, with the details of the money transfer. At any time during the review, the employee can send a request for amount rectification. In that case the rectification is registered and the report needs to be reviewed again. Moreover, if the report is not handled within 30 days, the process is stopped and the employee receives a cancelation notice email so that he can resubmit the expense report from scratch.
+Process description: After an expense report is received from an employee, the employee is notified of the receipt of the report. 
+Next, a new account must be created if the employee does not already have one. 
+The report is then reviewed for automatic approval. 
+Amounts under e 1,000 are automatically approved while amounts equal to or over e 1,000 require manual approval. 
+In case of rejection, the employee must receive a rejection notice by email. 
+In case of approval, the reimbursement is deposited directly to the employee’s bank account and an approval notice is sent to the employee via email, with the details of the money transfer. 
+At any time during the review, the employee can send a request for amount rectification. 
+In that case the rectification is registered and the report needs to be reviewed again. 
+Moreover, if the report is not handled within 30 days, the process is stopped and the employee receives a cancelation notice email so that he can resubmit the expense report from scratch.
 
 Process title: Claims handling
-Process description: When a claim is received, a claims officer first checks if the claimant is insured. If not, the claimant is informed that the claim must be rejected by sending an automatic notification via an SAP system. Otherwise, a senior claims officer evaluates the severity of the claim. Based on the outcome (simple or complex claims), the relevant forms are sent to the claimant, again using the SAP system. Once the forms are returned, they are checked for completeness by the claims officer. If the forms provide all relevant details, the claim is registered in the claims management system, and the process ends. Otherwise, the claimant is informed to update the forms via the SAP system. Upon reception of the updated forms, they are checked again by the claims officer to see if the details have been provided.
+Process description: When a claim is received, a claims officer first checks if the claimant is insured. 
+If not, the claimant is informed that the claim must be rejected by sending an automatic notification via an SAP system. 
+Otherwise, a senior claims officer evaluates the severity of the claim. 
+Based on the outcome (simple or complex claims), the relevant forms are sent to the claimant, again using the SAP system. 
+Once the forms are returned, they are checked for completeness by the claims officer. 
+If the forms provide all relevant details, the claim is registered in the claims management system, and the process ends. 
+Otherwise, the claimant is informed to update the forms via the SAP system. 
+Upon reception of the updated forms, they are checked again by the claims officer to see if the details have been provided.
 
 Process title: Damage compensation
-Process description: If a tenant is evicted because of damages to the premises, a process needs to be started by the tribunal in order to hold a hearing to assess the amount of compensation the tenant owes to the owner of the premises. This process starts when a cashier of the tribunal receives a request for compensation from the owner. The cashier then retrieves the file for those particular premises and checks that the request is both acceptable for filing and compliant with the description of the premises on file. After these checks, the cashier needs to set a hearing date. Setting a hearing date incurs fees to the owner. It may be that the owner has already paid the fees with the request, in which case the cashier allocates a hearing date and the process completes. It may be that additional fees are required, but the owner has already paid also those fees. In this case the cashier generates a receipt for the additional fees and proceeds with allocating the hearing date. Finally, if the owner has not paid the required fees, the cashier produces a fees notice and waits for the owner to pay the fees before reassessing the document compliance.
+Process description: If a tenant is evicted because of damages to the premises, a process needs to be started by the tribunal in order to hold a hearing to assess the amount of compensation the tenant owes to the owner of the premises. 
+This process starts when a cashier of the tribunal receives a request for compensation from the owner. 
+The cashier then retrieves the file for those particular premises and checks that the request is both acceptable for filing and compliant with the description of the premises on file. 
+After these checks, the cashier needs to set a hearing date. Setting a hearing date incurs fees to the owner. 
+It may be that the owner has already paid the fees with the request, in which case the cashier allocates a hearing date and the process completes. 
+It may be that additional fees are required, but the owner has already paid also those fees. In this case the cashier generates a receipt for the additional fees and proceeds with allocating the hearing date. 
+Finally, if the owner has not paid the required fees, the cashier produces a fees notice and waits for the owner to pay the fees before reassessing the document compliance.
